@@ -13,7 +13,19 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
+#welcome {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: #131c23;
+    background-color: #ea7c1a; /* Light blue background */
+    border: 2px solid #131c23; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    text-align: center; /* Centered text */
+    margin: 20px auto; /* Centered on the page */
+    max-width: 600px; /* Maximum width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 h1 {
 
     text-align: center;
