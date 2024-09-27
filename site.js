@@ -9,3 +9,8 @@ const welcome = document.querySelector('#welcome')
 if(isMorning) welcome.textContent = 'Good Morning!'
 if(isAfternoon) welcome.textContent = 'Good Afternoon!'
 if(isEvening) welcome.textContent = 'Good Evening!'
+
+const key = 'It\'s a secret to everybody'
+
+const secretMessage = "\"You have to believe that you can achieve anything\""
+localStorage.setItem(key, secretMessage)
