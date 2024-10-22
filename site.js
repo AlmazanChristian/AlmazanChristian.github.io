@@ -62,3 +62,34 @@ setInterval(() => {
     showImages()
 }, 5000)
 
+
+// Assignment 7 - To-Do List
+const todoList = document.querySelector('.todo-list')
+const input = document.querySelector('#new-todo')
+const addButton = document.querySelector('#add-todo')
+
+
+
+const todos = JSON.parse(localStorage.getItem('todo-list')) || []
+
+
+const renderTodos = () => {
+
+    todoList.innerHTML = ''
+
+    todos.forEach(todo => {
+        const li = document.createElement('li')
+        li.textContent = todo.text
+        todoList.append(li)
+    })
+}
+
+addButton.addEventListener('click', () => {
+    todos.push({ text: input.value, completed: false })
+    localStorage.setItem('todo-list', JSON.stringify(todos))
+    renderTodos()
+
+    input.value = ''
+})
+
+renderTodos()
